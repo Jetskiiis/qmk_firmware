@@ -53,14 +53,14 @@ uint16_t COMBO_LEN = COMBO_LENGTH;
 
 // 2. these consts define the keys that make up the combo - their names matter because you refer to them in 3
 // the syntax here will be lower case to differentiate them from the enums in 1
-const uint16_t PROGMEM h_whg_combo[] = {KC_O, KC_Y, COMBO_END}; // TYPE "wh" // for HD Gold/neu/Ti
-const uint16_t PROGMEM h_ph_combo[] = {KC_M, KC_P, COMBO_END}; // TYPE "ph"
-const uint16_t PROGMEM h_gh_combo[] = {KC_G, KC_L, COMBO_END}; // TYPE "gh"
-const uint16_t PROGMEM h_sh_combo[] = {LALT_T(KC_S), LCTL_T(KC_N), COMBO_END}; // "sh"
-const uint16_t PROGMEM h_th_combo[] = {LCTL_T(KC_N), LSFT_T(KC_D), COMBO_END}; // "th"
-const uint16_t PROGMEM h_ch_combo[] = {KC_C, KC_L, COMBO_END}; // "ch"
-const uint16_t PROGMEM c_del_combo[] = {LSFT_T(KC_D), KC_C, COMBO_END}; // Send Delete
-const uint16_t PROGMEM c_enter_combo[] = {LCTL_T(KC_N), KC_C, COMBO_END}; // Send Enter
+#define PROGMEM h_whg_combo[] = {KC_O, KC_Y, COMBO_END}; // TYPE "wh" // for HD Gold/neu/Ti
+#define PROGMEM h_ph_combo[] = {KC_M, KC_P, COMBO_END}; // TYPE "ph"
+#define PROGMEM h_gh_combo[] = {KC_G, KC_L, COMBO_END}; // TYPE "gh"
+#define PROGMEM h_sh_combo[] = {LALT_T(KC_S), LCTL_T(KC_N), COMBO_END}; // "sh"
+#define PROGMEM h_th_combo[] = {LCTL_T(KC_N), LSFT_T(KC_D), COMBO_END}; // "th"
+#define PROGMEM h_ch_combo[] = {KC_C, KC_L, COMBO_END}; // "ch"
+#define PROGMEM c_del_combo[] = {LSFT_T(KC_D), KC_C, COMBO_END}; // Send Delete
+#define PROGMEM c_enter_combo[] = {LCTL_T(KC_N), KC_C, COMBO_END}; // Send Enter
 
 // 3. this list tells QMK which combos, defined by your consts, will be added to the list of combos
 // [UPPERCASE_ENUM] = COMBO_ACTION(lowercase_const),

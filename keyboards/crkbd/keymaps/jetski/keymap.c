@@ -26,7 +26,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define U_CPY (LCTL(KC_C))
 #define U_PST (LCTL(KC_V))
 #define U_RDO (LCTL(KC_Y))
-#define MODS_SHIFT (get_mods() & MOD_BIT(KC_LSHIFT) || get_mods() & MOD_BIT(KC_RSHIFT))
+#define MODS_SHIFT (get_mods() & MOD_BIT(KC_LSFT) || get_mods() & MOD_BIT(KC_RSFT))
 #define SEND_CAP_STRING(str, capitalized) if (MODS_SHIFT) { \
                                             clear_mods(); \
                                             SEND_STRING(capitalized); \
@@ -131,46 +131,46 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   ),
 
   [1] = LAYOUT_split_3x5_3(
-    RESET,   U_UND,    U_CPY,   U_PST,  U_CUT,     U_CUT,   U_PST,   U_CPY,   U_UND,   U_RDO,
+    KC_NO,   U_UND,    U_CPY,   U_PST,  U_CUT,     U_CUT,   U_PST,   U_CPY,   U_UND,   U_RDO,
     KC_LGUI, KC_LALT,  KC_LCTL, KC_LSFT, KC_NO,    KC_CAPS, KC_LEFT, KC_DOWN, KC_UP,   KC_RGHT,
     KC_NO,    KC_NO,   KC_NO,   KC_NO,   KC_NO,     KC_INS,  KC_HOME, KC_PGDN, KC_PGUP, KC_END,
                         KC_NO,  KC_NO, KC_ENT,    KC_BSPC, KC_DEL,  KC_NO
   ),
 
   [2] = LAYOUT_split_3x5_3(
-   RESET,   KC_NO,    KC_NO,    KC_NO,    KC_NO,    U_RDO,   U_PST,   U_CPY,   U_CUT,   U_UND,
+   KC_NO,   KC_NO,    KC_NO,    KC_NO,    KC_NO,    U_RDO,   U_PST,   U_CPY,   U_CUT,   U_UND,
     KC_LGUI, KC_LALT, KC_LCTL, KC_LSFT, KC_NO,    KC_NO,    KC_MS_L, KC_MS_D, KC_MS_U, KC_MS_R,
     KC_NO,    KC_ALGR, KC_NO,    KC_NO,    KC_NO,    KC_NO,    KC_WH_L, KC_WH_D, KC_WH_U, KC_WH_R,
                       KC_NO,    KC_NO,    KC_NO,    KC_BTN1, KC_BTN3, KC_BTN2
   ),
 
   [3] = LAYOUT_split_3x5_3(
-  RESET,   KC_NO,    KC_NO,    KC_NO,    KC_NO,    RGB_TOG, RGB_MOD, RGB_HUI, RGB_SAI, RGB_VAI,
+  KC_NO,   KC_NO,    KC_NO,    KC_NO,    KC_NO,    RGB_TOG, RGB_MOD, RGB_HUI, RGB_SAI, RGB_VAI,
     KC_LGUI, KC_LALT, KC_LCTL, KC_LSFT, KC_NO,    KC_NO,    KC_MPRV, KC_VOLD, KC_VOLU, KC_MNXT,
     KC_NO,    KC_ALGR, KC_NO,  KC_NO,   KC_NO,    KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,
                       KC_NO,   KC_NO,  KC_NO,    KC_MSTP, KC_MPLY, KC_MUTE
   ),
 //RIGHT HAND
   [4] = LAYOUT_split_3x5_3(
-    KC_LBRC, KC_7,    KC_8,    KC_9,    KC_RBRC, KC_NO,    KC_NO,    KC_NO,    KC_NO,    RESET,
+    KC_LBRC, KC_7,    KC_8,    KC_9,    KC_RBRC, KC_NO,    KC_NO,    KC_NO,    KC_NO,    KC_NO,
     KC_SCLN, KC_4,    KC_5,    KC_6,    KC_EQL,  KC_NO,    KC_LSFT, KC_LCTL, KC_LALT, KC_LGUI,
     KC_GRV,  KC_1,    KC_2,    KC_3,    KC_BSLS, KC_NO,    KC_NO,    KC_NO,    KC_ALGR, KC_NO,
                       KC_DOT,  KC_0,    KC_MINS, KC_NO,    KC_NO,    KC_NO
   ),
   [5] = LAYOUT_split_3x5_3(
-    KC_LCBR, KC_AMPR, KC_ASTR, KC_LPRN, KC_RCBR, KC_NO,    KC_NO,    KC_NO,    KC_NO,    RESET,
+    KC_LCBR, KC_AMPR, KC_ASTR, KC_LPRN, KC_RCBR, KC_NO,    KC_NO,    KC_NO,    KC_NO,    KC_NO,
     KC_COLN, KC_DLR,  KC_PERC, KC_CIRC, KC_PLUS, KC_NO,    KC_LSFT, KC_LCTL, KC_LALT, KC_LGUI,
     KC_TILD, KC_EXLM, KC_AT,   KC_HASH, KC_PIPE, KC_NO,    KC_NO,    KC_NO,    KC_ALGR, KC_NO,
                        KC_LPRN, KC_RPRN, KC_UNDS, KC_ENT,    KC_NO,    KC_NO
   ),
   [6] = LAYOUT_split_3x5_3(
-    KC_F12,  KC_F7,   KC_F8,   KC_F9,   KC_PSCR, KC_NO,    KC_NO,    KC_NO,    KC_NO,    RESET,
-    KC_F11,  KC_F4,   KC_F5,   KC_F6,   KC_SLCK, KC_NO,    KC_LSFT, KC_LCTL, KC_LALT, KC_LGUI,
+    KC_F12,  KC_F7,   KC_F8,   KC_F9,   KC_PSCR, KC_NO,    KC_NO,    KC_NO,    KC_NO,    KC_NO,
+    KC_F11,  KC_F4,   KC_F5,   KC_F6,   KC_NO, KC_NO,    KC_LSFT, KC_LCTL, KC_LALT, KC_LGUI,
     KC_F10,  KC_F1,   KC_F2,   KC_F3,   KC_PAUS, KC_NO,    KC_NO,    KC_NO,    KC_ALGR, KC_NO,
                       KC_APP,  KC_SPC,  KC_TAB,  KC_NO,    KC_NO,    KC_NO
   ),
    [7] = LAYOUT_split_3x5_3( //button
-    RESET,   U_UND,    U_CPY,   U_PST,  U_CUT,     U_CUT,   U_PST,   U_CPY,   U_UND,   U_RDO,
+    KC_NO,   U_UND,    U_CPY,   U_PST,  U_CUT,     U_CUT,   U_PST,   U_CPY,   U_UND,   U_RDO,
     KC_LGUI, KC_LALT,  KC_LCTL, KC_LSFT, KC_NO,    KC_CAPS, KC_LEFT, KC_DOWN, KC_UP,   KC_RGHT,
     KC_NO,    KC_NO,   KC_NO,   KC_ESC,   KC_NO,     KC_INS,  KC_HOME, KC_PGDN, KC_PGUP, KC_END,
                         KC_NO,  KC_ESC, KC_ENT,    KC_BSPC, KC_DEL,  KC_NO

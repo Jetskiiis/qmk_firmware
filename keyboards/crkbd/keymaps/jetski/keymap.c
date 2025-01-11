@@ -9,7 +9,7 @@
 #define U_PST (LCTL(KC_V))
 #define U_RDO (LCTL(KC_Y))
 
-/*
+
 enum combo_events {
     C_DEL,
     C_ENTER,
@@ -46,7 +46,7 @@ void process_combo_event(uint16_t combo_index, bool pressed) {
       break;
   }
 }
-*/
+
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [0] = LAYOUT_split_3x5_3(
     KC_J,         KC_F,              KC_M,              KC_P,              KC_V,             KC_SCLN,           KC_DOT,           KC_SLSH,          KC_QUOTE,          KC_Z,

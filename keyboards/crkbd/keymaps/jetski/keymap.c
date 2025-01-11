@@ -17,6 +17,11 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 */
 
 #include QMK_KEYBOARD_H
+#define U_UND (LCTL(KC_Z))
+#define U_CUT (LCTL(KC_X))
+#define U_CPY (LCTL(KC_C))
+#define U_PST (LCTL(KC_V))
+#define U_RDO (LCTL(KC_Y))
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     [0] = LAYOUT_split_3x6_3(

@@ -94,16 +94,16 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [2] = LAYOUT_charybdis_3x5(
    KC_NO,               LALT(KC_LEFT),         KC_NO,        KC_ESC,       KC_NO,    U_RDO,   U_PST,   U_CPY,   U_CUT,   U_UND,
    LCTL(LGUI(KC_LEFT)), LSG(KC_LEFT),  LSG(KC_RGHT), LCTL(LGUI(KC_RGHT)), KC_NO,            KC_NO,    KC_BTN1, KC_BTN3, KC_MS_U, KC_MS_R,
-    KC_NO,              KC_ALGR,       KC_NO,        KC_NO,               KC_NO,    KC_NO,    KC_WH_L, KC_WH_D, KC_WH_U, KC_WH_R,
+   LGUI(KC_LEFT), LGUI(KC_DOWN), LGUI(KC_UP), LGUI(KC_RIGHT), KC_NO,      KC_NO,    KC_WH_L, KC_WH_D, KC_WH_U, KC_WH_R,
                         KC_NO,         KC_NO,        KC_NO,                         KC_BTN1,  KC_BTN3
   ),
 
 //Media//
   [3] = LAYOUT_charybdis_3x5(
-   KC_NO,   KC_NO,    KC_NO,    KC_NO,    KC_NO,    RGB_TOG, RGB_MOD, RGB_HUI, RGB_SAI, RGB_VAI,
-    LGUI(KC_LEFT), KC_LALT, KC_LCTL, KC_LSFT, KC_NO,    KC_NO,    KC_MPRV, KC_VOLD, KC_VOLU, KC_MNXT,
-    KC_NO,    KC_ALGR, KC_NO,  KC_NO,   KC_NO,    KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,
-                      KC_NO,   KC_NO,  KC_NO,    KC_MSTP, KC_MPLY 
+   KC_NO,   KC_NO,    KC_NO,    KC_NO,    KC_NO,          KC_NO, RGB_MOD, RGB_HUI, RGB_SAI, RGB_VAI,
+    KC_NO, LGUI(KC_4), LGUI(KC_5), LGUI(KC_6), KC_NO,      KC_NO,    KC_MPRV, KC_VOLD, KC_VOLU, KC_MNXT,
+    KC_NO, LGUI(KC_1), LGUI(KC_2), LGUI(KC_3),             KC_NO,    KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,
+                      KC_NO,   KC_NO,  KC_NO,              KC_MSTP, KC_MPLY 
   ),
 //RIGHT HAND
 //Num//
